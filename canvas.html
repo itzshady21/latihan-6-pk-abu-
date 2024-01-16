@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+</head>
+<body>
+    <canvas
+    id="canvasKu"
+    width="640"
+    height="480"
+    style="border: 5px solid red"
+    > 
+    </canvas>
+    
+    <!-- <script> -->
+        var canvas= document.getElementById("canvasKu");
+        var ctx= canvas.getContext("2d");
+
+        // gambar titik pada koordinat (100,100) dengan ukuran 50x50 px
+        ctx.fillRect(100, 100, 50, 50);
+        ctx.fillStyle="green";
+    <!-- </script> -->
+    
+    
+    <!-- <script> -->
+        var canvas= document.getElementById("canvasKu");
+        var ctx= canvas.getContext("2d");
+        
+        ctx.beginPath();
+        ctx.moveTo(10,10);
+        ctx.lineTo(50,50);
+        ctx.stroke();
+    <!-- </script> -->
+
+    <!-- <script> -->
+        var canvas= document.getElementById("canvasKu");
+        var ctx= canvas.getContext("2d");
+        ctx.strokeRect(10, 10, 100,100);
+        ctx.fillRect(120, 10, 100, 100);
+    <!-- </script> -->
+
+    <!-- <script> -->
+        var canvas= document.getElementById("canvasKu");
+        var ctx= canvas.getContext("2d");
+
+        ctx.beginPath();
+        ctx.moveTo (100, 100);
+        ctx.lineTo(100, 300);
+        ctx.lineTo(300, 300);
+        ctx.closePath();
+
+        ctx.stroke();
+    <!-- </script> -->
+
+    <!-- <script> -->
+        var canvas= document.getElementById("canvasKu");
+        var ctx= canvas.getContext("2d");
+        
+        ctx.beginPath();
+        ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+        ctx.stroke();
+    <!-- </script> -->
+        
+    <!-- <script> -->
+        var canvas= document.getElementById("canvasKu");
+        var ctx= canvas.getContext("2d");
+
+        ctx.font = "30px arial";
+        ctx.fillText("Latihan:", 10, 50);
+
+        ctx.font = "64 px Arial";
+        ctx.strokeText("Membuat Canvas", 10, 120);
+    </script>
+
+    <p>Image</p>
+    <img 
+    id="Kucing"
+    src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/600px-Cat03.jpg"
+     alt="kucingku"
+     width="220"
+     height="277"
+     />
+
+     <p><button onclick="renderImage()">Render Image</button></p>
+</body>
+</html>
